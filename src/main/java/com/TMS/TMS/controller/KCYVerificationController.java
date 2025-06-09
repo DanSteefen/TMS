@@ -23,7 +23,7 @@ public class KCYVerificationController {
     public ResponseEntity<KCYVerification> createKCYVerification(@RequestBody KCYVerification kcyVerification) throws Exception{
 
         KCYVerification verification = kcyVerificationService.createKCYVerification(kcyVerification);
-        return new ResponseEntity<>(verification, HttpStatus.OK);
+        return new ResponseEntity<>(verification, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
